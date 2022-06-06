@@ -55,7 +55,7 @@ body {
 
 .page {
     flex-grow: 1;
-    background: url(../img/card/placeholder.jpg) -10px 0px / 100% no-repeat;
+    background: url(../img/card/placeholder.jpg) -10px 0 / 110% no-repeat;
 }
 
 
@@ -167,14 +167,21 @@ body {
 
 .checkbox {
     display: block;
-    width: 50px;
-    height: 50px;
     cursor: pointer;
+    transform: scale(4.0);
+    margin: 17px 15px 0 0;
     opacity: 0;
 }
 
 
 @media (max-width: 650px) {
+    .checkbox:checked {
+        display: block;
+        cursor: pointer;
+        transform: scale(5.0);
+        margin: 20px 20px 0 0;
+    }
+
     .header__lines {
         display: block;
     }
@@ -285,7 +292,7 @@ body {
 
 .btn:hover {
     color: #34C759;
-    background: rgba(51, 49, 49, 0.8);
+    background: rgba(51, 49, 49, 0.2);
     border: 1px #34C759 solid;
     cursor: pointer;
 }
@@ -337,6 +344,16 @@ body {
     opacity: 0.5;
 }
 
+@media (max-width: 728px) {
+    .card__title {
+        font-size: 45px;
+    }
+
+    .card__text {
+        font-size: 14px;
+    }
+}
+
 .about {
 
 }
@@ -345,7 +362,7 @@ body {
     background: #252525;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
-    padding: 105px 0 90px 0;
+    padding: 105px 20px 90px;
 }
 
 .about__heading {
@@ -362,6 +379,8 @@ body {
     margin: 0 0 40px 0;
     background: url(../img/about/about.png) 50% / auto 70px no-repeat;
 }
+
+
 
 .about__text {
     font-weight: 400;
@@ -422,6 +441,7 @@ body {
     flex: 0 1 100%;
     display: block;
     transition: 1s;
+    width: 100%;
 }
 
 .about__image img:hover {
@@ -961,6 +981,14 @@ body {
     margin: 0 -10px;
 }
 
+@media (max-width: 430px) {
+    .item-recipes__footer {
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: center;
+    }
+}
+
 .item-recipes__btn {
     font-weight: 900;
     font-size: 10px;
@@ -1010,12 +1038,22 @@ body {
     row-gap: 30px;
     margin: 0 -15px;
     padding: 25px 30px 35px;
+    justify-content: center;
 }
 
 .social__item {
     flex: 1 1 33.333%;
     min-width: 300px;
     padding: 0 15px;
+    min-width: 309px;
+}
+
+@media (max-width: 390px) {
+    .social__item {
+        flex: 1 1 33.333%;
+        padding: 0;
+        min-width: 309px;
+    }
 }
 
 .social__content {
@@ -1024,6 +1062,7 @@ body {
     border-radius: 6px;
     padding: 25px;
     height: 100%;
+    min-width: 309px;
 }
 
 .social__header {
